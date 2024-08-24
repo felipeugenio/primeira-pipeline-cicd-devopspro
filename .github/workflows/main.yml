@@ -25,11 +25,8 @@ jobs:
           feugenio/gitactionk8s:latest 
   CD:
     needs: [CI]
-    steps: 
-    uses: felipeugenio/primeira-pipeline-cicd-devopspro/.github/workflows/deploy.yml
+    uses: felipeugenio/primeira-pipeline-cicd-devopspro/.github/workflows/deploy.yml@main
     with:
-      manifests: |
-        k8s/deployment.yaml
-      images: |
-          fabricioveronez/aula-primeira-pipeline:v${{ github.run_number }}
+      manifests: k8s/deployment.yaml
+      images: fabricioveronez/aula-primeira-pipeline:v${{ github.run_number }}
       secrets: inherit
