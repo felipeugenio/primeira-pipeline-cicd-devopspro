@@ -21,8 +21,8 @@ jobs:
         file: ./src/Dockerfile
         push: true
         tags: | 
-          feugenio/aula-primeira-pipeline:v${{ github.run_number }} 
-          feugenio/aula-primeira-pipeline:latest 
+          feugenio/gitactionk8s:v${{ github.run_number }} 
+          feugenio/gitactionk8s:latest 
   CD:
     runs-on: ubuntu-latest
     needs: [CI]
@@ -40,4 +40,4 @@ jobs:
         manifests: |
           ./k8s/deployment.yaml
         images: |
-          feugenio/aula-primeira-pipeline:v${{ github.run_number }}
+          feugenio/gitactionk8s:v${{ github.run_number }}
