@@ -29,4 +29,4 @@ jobs:
     with:
       manifests: k8s/deployment.yaml
       images: fabricioveronez/aula-primeira-pipeline:v${{ github.run_number }}
-      secrets: inherit
+    secrets: inherit
