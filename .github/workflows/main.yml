@@ -26,7 +26,7 @@ jobs:
   CD:
     needs: [CI]
     steps: 
-    uses: felipeugenio/primeira-pipeline-cicd-devopspro/.github/workflows/dploy.yml
+    uses: felipeugenio/primeira-pipeline-cicd-devopspro/.github/workflows/deploy.yml
     with:
       manifests: |
         k8s/deployment.yaml
